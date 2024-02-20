@@ -1,6 +1,6 @@
 package screen.notescreen;
 
-import menu.Menu;
+import menu.notemenu.NoteMenu;
 import note.Note;
 import screen.Screen;
 
@@ -10,8 +10,9 @@ import java.util.List;
 public class NoteScreen extends Screen {
     private List<Note> notes = new ArrayList<>();
     private final String NOTE_SCREEN_HEADER = "Записи.";
-    public NoteScreen(Menu menu) {
-        super(menu);
+
+    public NoteScreen() {
+        super(new NoteMenu());
         super.setMenuHeader(NOTE_SCREEN_HEADER);
     }
 
@@ -19,7 +20,11 @@ public class NoteScreen extends Screen {
         return notes;
     }
 
-    public void setNotes(Note note) {
+    public void setNote(Note note) {
         this.notes.add(note);
+    }
+
+    public boolean deleteNote(long noteId) {
+        return getNotes().removeIf(note -> note.getNoteId() == noteId);
     }
 }

@@ -1,22 +1,16 @@
 package screen;
 
-import menu.Menu;
+import menu.IMenu;
 import menu.MenuOptions;
 
 public abstract class Screen {
-    private Menu menu;
+    private IMenu menu;
     private String menuHeader;
 
-    public Screen(Menu menu) {
+    public Screen(IMenu menu) {
         this.menu = menu;
     }
 
-    public void setMenu(Menu menu) {
-        this.menu = menu;
-    }
-    public Menu getMenu() {
-        return menu;
-    }
     public String getMenuHeader() {
         return menuHeader;
     }
