@@ -1,6 +1,5 @@
 package note;
 
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Note {
@@ -56,6 +55,6 @@ public class Note {
                 ", Время записи=" + noteTimeStamp + '\'' +
                 ", Заголовок='" + noteHeader + '\'' +
                 ", Описание='" + noteDescription + '\'' +
-                '}';
+                '}' + "\n";
     }
 }

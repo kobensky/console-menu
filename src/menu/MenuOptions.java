@@ -2,7 +2,7 @@ package menu;
 
 public enum MenuOptions {
     CREATE_NOTE("Создать запись"),
-    SHOW_NOTE("Посмотреть запись"),
+    SHOW_NOTE("Посмотреть записи"),
     DELETE_NOTE("Удалить запись"),
     BACK("Назад"),
     NOTE("Записи"),

@@ -1,12 +1,22 @@
 package menu.mainmenu;
 
-import menu.Menu;
+import menu.IMenu;
 import menu.MenuOptions;
 
-import java.util.Set;
+import java.util.Arrays;
+import java.util.List;
 
-public class MainMenu extends Menu {
+public class MainMenu implements IMenu {
+    private final List<MenuOptions> mainMenuOptions = Arrays.asList(
+            MenuOptions.NOTE,
+            MenuOptions.EXIT
+    );
+
     public MainMenu() {
-        super(Set.of(MenuOptions.NOTE, MenuOptions.EXIT));
+    }
+
+    @Override
+    public List<MenuOptions> getOptions() {
+        return mainMenuOptions;
     }
 }

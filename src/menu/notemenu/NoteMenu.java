@@ -1,12 +1,25 @@
 package menu.notemenu;
 
-import menu.Menu;
+import menu.IMenu;
 import menu.MenuOptions;
 
-import java.util.Set;
+import java.util.Arrays;
+import java.util.List;
 
-public class NoteMenu extends Menu {
+public class NoteMenu implements IMenu {
+    private final List<MenuOptions> noteOptions = Arrays.asList(
+            MenuOptions.CREATE_NOTE,
+            MenuOptions.SHOW_NOTE,
+            MenuOptions.DELETE_NOTE,
+            MenuOptions.BACK
+    );
+
     public NoteMenu() {
-        super(Set.of(MenuOptions.CREATE_NOTE, MenuOptions.SHOW_NOTE, MenuOptions.DELETE_NOTE, MenuOptions.BACK));
+
+    }
+
+    @Override
+    public List<MenuOptions> getOptions() {
+        return noteOptions;
     }
 }
